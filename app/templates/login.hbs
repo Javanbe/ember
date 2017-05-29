@@ -1,0 +1,65 @@
+<script>
+$(function(){
+	//清除提示信息
+	$("#count_msg").html("");
+	$("#password_msg").html("");
+	//给按钮追加单击处理
+	$("#login").click(function(){
+		//获取请求数据
+		var name = $("#count").val().trim();
+		var password = $("#password").val().trim();
+		//检查数据格式
+		var ok = true;
+		if(name==""){
+			$("#count_msg").html("not null!");
+			ok = false;
+		}
+		if(password==""){
+			$("#password_msg").html("not null!");
+			ok = false;
+		}
+		if(name == "admin" && password == "admin"){
+		//	alert("pass!");
+			window.location.href = "info"
+                } else if(name != "admin" && password != "admin"){
+		     $("#count_msg").html("error!");
+		     $("#password_msg").html("error!");
+		}
+
+	});		
+});
+</script>
+
+
+<div class="global">
+      <div class="log log_in" tabindex='-1' id='dl'>
+        <dl>
+          <dt>
+            <div class='header'>
+              <h3>SCB&nbsp;Login</h3>
+            </div>
+          </dt>
+          <dt></dt>
+          <dt>
+            <div class='letter'>
+              UserName:&nbsp;<input type="text" name="" id="count" tabindex='1'/>
+                            <span id="count_msg"></span>                    
+            </div>
+          </dt>
+          <dt>
+            <div class='letter'>
+              PassWord:&nbsp;&nbsp;<input type="password" name="" id="password" tabindex='2'/>
+                            <span id="password_msg"></span>  
+            </div>
+          </dt>
+          <dt>
+            <div>
+             <input class="button" type="button" name="" id="login" value='Login' tabindex='3'/>
+	      
+            </div>
+          </dt>
+        </dl>
+      </div> 
+    </div>
+
+
