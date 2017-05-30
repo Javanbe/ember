@@ -1,4 +1,4 @@
-<script>
+			<script>
 $(function(){
 	//清除提示信息
 	$("#count_msg").html("");
@@ -10,21 +10,33 @@ $(function(){
 		var password = $("#password").val().trim();
 		//检查数据格式
 		var ok = true;
+
 		if(name==""){
 			$("#count_msg").html("not null!");
 			ok = false;
 		}
+
 		if(password==""){
 			$("#password_msg").html("not null!");
 			ok = false;
 		}
-		if(name == "admin" && password == "admin"){
-		//	alert("pass!");
-			window.location.href = "info"
-                } else if(name != "admin" && password != "admin"){
-		     $("#count_msg").html("error!");
-		     $("#password_msg").html("error!");
-		}
+
+		if(name == "admin"){
+		  if(password == "admin"){
+                      window.location.href = "info";
+		  }else if(password != "admin"){
+		      $("#password_msg").html("error");
+		  }else if(password !=""){
+		     	$("#password_msg").html("not null!");
+		  }
+                }else{
+		     if(password == ""){
+		        $("#password_msg").html("not null");
+		     }else if(password != "admin"){
+		     	   $("#count_msg").html("error!");
+ 			   $("#password_msg").html("error!");
+		     }	
+		 } 
 
 	});		
 });
