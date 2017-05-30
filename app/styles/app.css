@@ -106,11 +106,19 @@ dt{
 	background:#13A89E;
 }
 h3{
-	line-height:55px;
-	font-family:'ËÎÌå';
+	line-height:20px;
+	font-family:'ÑÅºÚ';
 	font-size:25px;
 	font-weight:400;
-	text-indent:1.5em;
+	text-indent:0em;
+}
+h1{
+	line-height:100px;
+	font-family:'ÑÅºÚ';
+	font-size:54px;
+	font-weight:1400;
+	text-indent:;
+	
 }
 input[type=text],input[type=password]{
 	height:30px;
@@ -426,4 +434,14 @@ body{
   -moz-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset;
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset;
   box-shadow: 0 0 1px rgba(0, 0, 0, .2) inset, 5px 0 5px -3px rgba(0, 0, 0, .2) inset;
+}
+.tomster {
+    background: url(../assets/images/bank.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    top: 0px;
+	right:20px;
 }
